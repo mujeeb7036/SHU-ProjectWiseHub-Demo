@@ -135,59 +135,60 @@ shu-projectwise-hub/
 │   │
 │   ├── student/
 │   │   ├── dashboard/
-│   │   │   ├── page.tsx          # Student dashboard route (/student/dashboard)
-│   │   │   ├── client.tsx        # Client component for student dashboard
-│   │   │   └── loading.tsx       # Loading component
+│   │   │   ├── page.tsx           # Server component with metadata
+│   │   │   ├── client.tsx         # Client component with dashboard UI
+│   │   │   └── loading.tsx        # Loading state component
 │   │   │
-│   │   ├── submit/
-│   │   │   ├── page.tsx          # Project submission route (/student/submit)
-│   │   │   └── client.tsx        # Client component for submission form
+│   │   ├── login/
+│   │   │   └── page.tsx           # Student login page
 │   │   │
-│   │   └── login/
-│   │       └── page.tsx          # Student login page (/student/login)
+│   │   └── submit/
+│   │       ├── page.tsx           # Server component with metadata
+│   │       └── client.tsx         # Client component with submission form
 │   │
 │   ├── faculty/
 │   │   └── dashboard/
-│   │       ├── page.tsx          # Faculty dashboard route (/faculty/dashboard)
-│   │       ├── client.tsx        # Client component for faculty dashboard
+│   │       ├── page.tsx           # Server component with metadata
+│   │       ├── client.tsx         # Client component with dashboard UI
 │   │       ├── FacultyDashboardClientComponent.tsx  # Alternative client component
-│   │       └── loading.tsx       # Loading component
+│   │       └── loading.tsx        # Loading state component
 │   │
 │   └── admin/
 │       └── dashboard/
-│           └── page.tsx          # Admin dashboard route (/admin/dashboard)
+│           └── page.tsx           # Admin dashboard page
 │
 ├── components/
-│   ├── ui/                       # shadcn/ui components
+│   ├── ui/                        # shadcn/ui components
+│   │   ├── accordion.tsx
+│   │   ├── alert.tsx
+│   │   ├── badge.tsx
 │   │   ├── button.tsx
 │   │   ├── card.tsx
+│   │   ├── dropdown-menu.tsx
 │   │   ├── input.tsx
 │   │   ├── label.tsx
-│   │   ├── badge.tsx
-│   │   ├── tabs.tsx
-│   │   ├── select.tsx
-│   │   ├── textarea.tsx
 │   │   ├── progress.tsx
-│   │   ├── alert.tsx
-│   │   └── ...
+│   │   ├── select.tsx
+│   │   ├── tabs.tsx
+│   │   ├── textarea.tsx
+│   │   └── ... (other UI components)
 │   │
-│   └── theme-provider.tsx        # Theme provider component
-│
-├── hooks/
-│   ├── use-mobile.tsx           # Mobile detection hook
-│   └── use-toast.ts             # Toast notifications hook
+│   └── theme-provider.tsx         # Theme provider component
 │
 ├── lib/
-│   └── utils.ts                 # Utility functions (cn, etc.)
+│   └── utils.ts                   # Utility functions (cn function for class merging)
 │
-├── public/                      # Static assets
+├── hooks/
+│   ├── use-mobile.tsx             # Hook for detecting mobile devices
+│   └── use-toast.ts               # Toast notification hook
+│
+├── public/                        # Static assets
 │   └── ...
 │
-├── next.config.mjs             # Next.js configuration
-├── tailwind.config.ts          # Tailwind CSS configuration
-├── tsconfig.json              # TypeScript configuration
-├── package.json               # Dependencies and scripts
-└── README.md                  # Project documentation
+├── next.config.mjs                # Next.js configuration
+├── tailwind.config.ts             # Tailwind CSS configuration
+├── tsconfig.json                  # TypeScript configuration
+└── package.json                   # Project dependencies and scripts
 ```
 
 Once you complete these steps, SHU ProjectWise Hub should be running locally at `http://localhost:3000`! 🎉
